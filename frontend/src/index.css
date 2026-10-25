@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #d9e6ff;
+  --color-brand-200: #bcd3ff;
+  --color-brand-300: #8eb5ff;
+  --color-brand-400: #598cff;
+  --color-brand-500: #3363f6;
+  --color-brand-600: #1f45e3;
+  --color-brand-700: #1934b7;
+  --color-brand-800: #1a2f90;
+  --color-brand-900: #1b2c72;
+  --color-brand-950: #141c46;
+
+  --color-ink-50: #f6f7f9;
+  --color-ink-100: #eceef2;
+  --color-ink-200: #d5d9e2;
+  --color-ink-300: #b0b8c9;
+  --color-ink-400: #8592ab;
+  --color-ink-500: #667491;
+  --color-ink-600: #515d78;
+  --color-ink-700: #434c61;
+  --color-ink-800: #3a4152;
+  --color-ink-900: #343946;
+  --color-ink-950: #22252e;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-ink-50 text-ink-900 antialiased;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-500;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-ink-300;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+}
+
+@utility card {
+  @apply rounded-xl border border-ink-200 bg-white shadow-sm;
+}
+
